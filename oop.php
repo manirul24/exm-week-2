@@ -82,7 +82,7 @@ class Member {
 
         $book->borrowBook();
        
-         echo "{$this->name} has borrowed '{$book->getTitle()}' Available Copies: '{$book->getAvailableCopies()}'.\n";
+       //  echo "{$this->name} has borrowed '{$book->getTitle()}' Available Copies: '{$book->getAvailableCopies()}'.\n";
     
  }
 
@@ -90,7 +90,7 @@ class Member {
 
   public function returnBook(Book $book){
 $book->returnBook();
- echo "{$this->name} has return Book '{$book->getTitle()}' Available Copies: '{$book->getAvailableCopies()} .\n";
+// echo "{$this->name} has return Book '{$book->getTitle()}' Available Copies: '{$book->getAvailableCopies()} .\n";
     
  }
  
