@@ -45,7 +45,8 @@ class Book
             $this->availableCopies--;
             return true;
         } else {
-            echo "this book {$this->title} not availavle.\n";
+            echo "Sorry, This book {$this->title} not availavle.\n";
+            return false;
 
         }
     }
@@ -82,7 +83,7 @@ class Member {
 
         $book->borrowBook();
        
-       //  echo "{$this->name} has borrowed '{$book->getTitle()}' Available Copies: '{$book->getAvailableCopies()}'.\n";
+    
     
  }
 
@@ -90,12 +91,11 @@ class Member {
 
   public function returnBook(Book $book){
 $book->returnBook();
-// echo "{$this->name} has return Book '{$book->getTitle()}' Available Copies: '{$book->getAvailableCopies()} .\n";
+ 
     
  }
  
 }
-
 
 // Usage
 
@@ -113,10 +113,10 @@ $member2=new Member(" Jane Smith");
 
 $member1->borrowBook($Book1);
 $member2->borrowBook($Book2);
-//$member2->returnBook($Book2);
+ 
 
-echo "Available Copies of ".$Book1->getTitle().': '.$Book1->getAvailableCopies()."\n";
-echo "Available Copies of ".$Book2->getTitle().': '.$Book2->getAvailableCopies();
+echo "Available Copies of '".$Book1->getTitle()."': ".$Book1->getAvailableCopies()."\n";
+echo "Available Copies of '".$Book2->getTitle()."': ".$Book2->getAvailableCopies();
 
 
 
